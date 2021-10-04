@@ -23,6 +23,10 @@ Route::get('/', function () {
 Route::post('/store/tend', [TendController::class, 'store'])
 ->name('tend.store');
 
+// tendの分析結果を見る
+Route::get('/show/tend', [TendController::class, 'show'])
+->name('tend.show');
+
 // result入力ファイルを受け取る
 Route::post('/store/result', [ResultController::class, 'store'])
 ->name('result.store');

@@ -53,6 +53,8 @@
 
     </form>
 
+    <a href="{{route('tend.show')}}">AIの傾向を見る</a>
+
 
   </body>
 </html>

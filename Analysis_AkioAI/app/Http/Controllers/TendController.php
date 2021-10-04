@@ -54,4 +54,33 @@ class TendController extends Controller
 
     }
 
+    public function show(){
+
+
+        $tends = Tend::where('result','=','1')->get();
+        $a = Tend::where('result','=','1')->get()->avg('a');
+        $b = Tend::where('result','=','1')->get()->avg('b');
+        $c = Tend::where('result','=','1')->get()->avg('c');
+        $d = Tend::where('result','=','1')->get()->avg('d');
+        $e = Tend::where('result','=','1')->get()->avg('e');
+        $f = Tend::where('result','=','1')->get()->avg('f');
+        $g = Tend::where('result','=','1')->get()->avg('g');
+        $h = Tend::where('result','=','1')->get()->avg('h');
+        $k = Tend::where('result','=','1')->get()->avg('k');
+
+        return view('show_tend')
+            ->with(['tends' => $tends,
+                    'a' => $a,
+                    'b' => $b,
+                    'c' => $c,
+                    'd' => $d,
+                    'e' => $e,
+                    'f' => $f,
+                    'g' => $g,
+                    'h' => $h,
+                    'k' => $k,
+                        ]);
+
+    }
+
 }
